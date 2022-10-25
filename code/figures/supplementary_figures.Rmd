@@ -1,0 +1,37 @@
+---
+title: "USING FAECAL IMMMUNOCHEMICAL CARTRIDGES FOR GUT MICROBIOME ANALYSIS WITHIN A COLORECTAL CANCER SCREENING PROGRAM"
+author: "Supplementary Figures"
+output: pdf_document
+header-includes: 
+  \usepackage{float} \floatplacement{figure}{H} 
+  \newcommand{\beginsupplement}{\setcounter{table}{0}  \renewcommand{\thetable}{S\arabic{table}} \setcounter{figure}{0} \renewcommand{\thefigure}{S\arabic{figure}}}
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE,
+                      message = FALSE, fig.height = 7.85, fig.width = 6.7)
+```
+
+\beginsupplement
+
+##
+
+```{r, fig.cap = "Figure based on patient-samples. ASVs are coloured according to their phylum and sized according to their abundance. A: Scatterplot of ASVs with mean center log ratio transformed abundances of FIT and Norgen samples for each taxonomic rank. B: Scatterplot showing the relationship between each ASV‘s ICC estimate (with confidence interval) and  the sum of the logarithms of its abundances for each taxonomic rank. ICCs above 0.9  (dashed line) indicate excellent reliability. Boxplots of the ICCs are provided additionally. C: Violin plots displaying the proportions of reads and sequences classified at each taxonomic rank."}
+source("code/load_all.R")
+
+
+
+sup_p1 <- readRDS("plots/Supplementary_figure1.RDS")
+
+print(sup_p1)
+```
+
+## 
+
+```{r, echo=FALSE, fig.cap = "Figure based on volunteer-samples. Scatterplot showing the relationship between each ASV‘s ICC estimate (with confidence interval) and the sum of the logarithms of its abundances for each taxonomic rank. ICCs above 0.9 (dashed line) indicate excellent reliability. Boxplots of the ICCs are provided additionally. Points are sized according to the ASV's abundance used for the respective analysis."}
+
+sup_p2 <- readRDS("plots/Supplementary_figure2.RDS")
+
+print(sup_p2)
+```
+
